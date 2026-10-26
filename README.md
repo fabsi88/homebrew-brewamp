@@ -33,10 +33,10 @@ The Cask installs **BrewAMP.app**. PHP, MariaDB, nginx/Apache and optional phpMy
 
 | Field | Value |
 | --- | --- |
-| Version | 0.5.2 |
+| Version | 0.5.3 |
 | Architecture | arm64 |
-| Planned download URL | `https://brewamp.app/downloads/BrewAMP-0.5.2-arm64.dmg` |
-| SHA-256 | `b861669e3b56f38ebb660914df22f7f114ad0dc97e7da159144bcc6eae36a9fc` |
+| Planned download URL | `https://brewamp.app/downloads/BrewAMP-0.5.3-arm64.dmg` |
+| SHA-256 | `800b2c3c606660e8dc48eb6eca1de6ba56575f54c9f7d58bde06feaf3a81d2fb` |
 | App bundle identifier | `app.brewamp.BrewAMP` |
 
 The prepared DMG is Developer ID signed and Apple notarized. Its public HTTP delivery and installation through this tap remain to be verified after hosting is enabled. The versioned download must keep the same bytes once published.
