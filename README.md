@@ -2,7 +2,7 @@
 
 The publisher-maintained Homebrew tap for **BrewAMP**, a free native macOS app for local PHP and MariaDB development on Apple Silicon.
 
-**BrewAMP 0.6.0 is available.** The versioned DMG is Developer ID signed and Apple notarized. Its public HTTPS download and final checksum have been verified.
+**BrewAMP 0.7.0 is available.** The versioned DMG is Developer ID signed and Apple notarized. Its public HTTPS download and final checksum have been verified.
 
 ## Installation
 
@@ -31,15 +31,15 @@ The Cask installs **BrewAMP.app**. PHP, MariaDB, nginx/Apache and optional phpMy
 
 | Field | Value |
 | --- | --- |
-| Version | 0.6.0 |
+| Version | 0.7.0 |
 | Architecture | arm64 |
-| Download URL | `https://brewamp.app/downloads/BrewAMP-0.6.0-arm64.dmg` |
-| SHA-256 | `c6756d347b501ef3f20c811e86831630e7c95eb7ad9b6f767d9fbc57e8f47a34` |
+| Download URL | `https://brewamp.app/downloads/BrewAMP-0.7.0-arm64.dmg` |
+| SHA-256 | `deceb4073edfd6f90f78ba23f7751a169ff93f9ddd0e8449cf4ca4b7e83a126e` |
 | App bundle identifier | `app.brewamp.BrewAMP` |
 
 The DMG is Developer ID signed and Apple notarized. Public HTTPS delivery, final checksum and the downloaded app's signature and Gatekeeper assessment have been verified. Versioned downloads keep the same bytes once published.
 
-Validated on October 27, 2026: Homebrew style, strict online audit, livecheck (0.6.0), actual tap installation, native app launch and regular uninstall. The uninstall checks preserved all recorded project and database files, the environment catalog and shared Homebrew formulae. No `--zap` or `--force` was used.
+Release 0.7.0 adds custom web folders, a project/SQL import assistant with a chosen database name, and native database/user management. Public HTTPS delivery, the exact DMG checksum and notarization have been verified. Homebrew installation and upgrade commands are unchanged.
 
 The Cask includes a `livecheck` rule that reads versioned DMG links on the public homepage. For each future release, update `version` and `sha256` after signing, notarization and final ticket stapling. Keep previously published files unchanged.
 
