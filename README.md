@@ -41,6 +41,8 @@ The DMG is Developer ID signed and Apple notarized. Public HTTPS delivery, final
 
 Release 0.7.0 adds custom web folders, a project/SQL import assistant with a chosen database name, and native database/user management. Public HTTPS delivery, the exact DMG checksum and notarization have been verified. Homebrew installation and upgrade commands are unchanged.
 
+Validated on October 27, 2026: Homebrew style, strict online audit, livecheck (0.7.0), default installation into Applications, app launch, graceful Cask quit, regular uninstall and reinstallation. The uninstall check preserved 118,516 recorded project/data files and symlinks, the exact environment catalog and all shared Homebrew formula versions. No `--zap` or `--force` was used.
+
 The Cask includes a `livecheck` rule that reads versioned DMG links on the public homepage. For each future release, update `version` and `sha256` after signing, notarization and final ticket stapling. Keep previously published files unchanged.
 
 ## Upgrade and uninstall
