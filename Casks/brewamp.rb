@@ -1,6 +1,6 @@
 cask "brewamp" do
-  version "0.7.0"
-  sha256 "deceb4073edfd6f90f78ba23f7751a169ff93f9ddd0e8449cf4ca4b7e83a126e"
+  version "0.7.1"
+  sha256 "6d802bba5b84d1f131bb4e589a3cae9cee8fdb48ab6ea98be81aa406b8e66ac4"
 
   url "https://brewamp.app/downloads/BrewAMP-#{version}-arm64.dmg"
   name "BrewAMP"

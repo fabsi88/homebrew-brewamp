@@ -2,7 +2,7 @@
 
 The publisher-maintained Homebrew tap for **BrewAMP**, a free native macOS app for local PHP and MariaDB development on Apple Silicon.
 
-**BrewAMP 0.7.0 is available.** The versioned DMG is Developer ID signed and Apple notarized. Its public HTTPS download and final checksum have been verified.
+**BrewAMP 0.7.1 is available.** The versioned DMG is Developer ID signed and Apple notarized. Its public HTTPS download and final checksum have been verified.
 
 ## Installation
 
@@ -31,17 +31,15 @@ The Cask installs **BrewAMP.app**. PHP, MariaDB, nginx/Apache and optional phpMy
 
 | Field | Value |
 | --- | --- |
-| Version | 0.7.0 |
+| Version | 0.7.1 |
 | Architecture | arm64 |
-| Download URL | `https://brewamp.app/downloads/BrewAMP-0.7.0-arm64.dmg` |
-| SHA-256 | `deceb4073edfd6f90f78ba23f7751a169ff93f9ddd0e8449cf4ca4b7e83a126e` |
+| Download URL | `https://brewamp.app/downloads/BrewAMP-0.7.1-arm64.dmg` |
+| SHA-256 | `6d802bba5b84d1f131bb4e589a3cae9cee8fdb48ab6ea98be81aa406b8e66ac4` |
 | App bundle identifier | `app.brewamp.BrewAMP` |
 
 The DMG is Developer ID signed and Apple notarized. Public HTTPS delivery, final checksum and the downloaded app's signature and Gatekeeper assessment have been verified. Versioned downloads keep the same bytes once published.
 
-Release 0.7.0 adds custom web folders, a project/SQL import assistant with a chosen database name, and native database/user management. Public HTTPS delivery, the exact DMG checksum and notarization have been verified. Homebrew installation and upgrade commands are unchanged.
-
-Validated on October 27, 2026: Homebrew style, strict online audit, livecheck (0.7.0), default installation into Applications, app launch, graceful Cask quit, regular uninstall and reinstallation. The uninstall check preserved 118,516 recorded project/data files and symlinks, the exact environment catalog and all shared Homebrew formula versions. No `--zap` or `--force` was used.
+Release 0.7.1 adds update notifications, a manual Check for Updates command and a daily startup-check limit with an opt-out in Settings. Installation remains an explicit DMG or Homebrew step.
 
 The Cask includes a `livecheck` rule that reads versioned DMG links on the public homepage. For each future release, update `version` and `sha256` after signing, notarization and final ticket stapling. Keep previously published files unchanged.
 
