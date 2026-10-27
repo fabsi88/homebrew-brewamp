@@ -39,7 +39,9 @@ The Cask installs **BrewAMP.app**. PHP, MariaDB, nginx/Apache and optional phpMy
 
 The DMG is Developer ID signed and Apple notarized. Public HTTPS delivery, final checksum and the downloaded app's signature and Gatekeeper assessment have been verified. Versioned downloads keep the same bytes once published.
 
-The Cask includes a `livecheck` rule that reads versioned DMG links on the homepage once it is public. For each future release, update `version` and `sha256` after signing, notarization and final ticket stapling. Keep previously published files unchanged.
+Validated on October 27, 2026: Homebrew style, strict online audit, livecheck (0.6.0), actual tap installation, native app launch and regular uninstall. The uninstall checks preserved all recorded project and database files, the environment catalog and shared Homebrew formulae. No `--zap` or `--force` was used.
+
+The Cask includes a `livecheck` rule that reads versioned DMG links on the public homepage. For each future release, update `version` and `sha256` after signing, notarization and final ticket stapling. Keep previously published files unchanged.
 
 ## Upgrade and uninstall
 
