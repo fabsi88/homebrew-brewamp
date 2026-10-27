@@ -41,6 +41,8 @@ The DMG is Developer ID signed and Apple notarized. Public HTTPS delivery, final
 
 Release 0.7.1 adds update notifications, a manual Check for Updates command and a daily startup-check limit with an opt-out in Settings. Installation remains an explicit DMG or Homebrew step.
 
+Validated on October 27, 2026: Homebrew style, strict online audit, livecheck (0.7.1), and an actual upgrade of the registered Cask from 0.7.0 to 0.7.1 in Applications. All 118,516 recorded project/data files and symlinks, exact environment catalog and shared formula versions survived unchanged. Strict signature and Gatekeeper checks pass. The signed app launches, checks the live update feed and restores the previously running environment. An additional uninstall/reinstall cycle was not run for this release.
+
 The Cask includes a `livecheck` rule that reads versioned DMG links on the public homepage. For each future release, update `version` and `sha256` after signing, notarization and final ticket stapling. Keep previously published files unchanged.
 
 ## Upgrade and uninstall
