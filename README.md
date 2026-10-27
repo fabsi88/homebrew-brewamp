@@ -2,17 +2,15 @@
 
 The publisher-maintained Homebrew tap for **BrewAMP**, a free native macOS app for local PHP and MariaDB development on Apple Silicon.
 
-**Launch status: prepared, not yet installable.** The notarized 0.6.0 DMG is available on the website. The Cask stays disabled until the remaining DNS caches for its exact download host have updated and the actual Homebrew installation checks pass. The website download is live; installation through this tap has not been activated yet.
+**BrewAMP 0.6.0 is available.** The versioned DMG is Developer ID signed and Apple notarized. Its public HTTPS download and final checksum have been verified.
 
-## Installation after launch
-
-Once the signed download is publicly available and the Cask has been enabled:
+## Installation
 
 ```sh
 brew install --cask fabsi88/brewamp/brewamp
 ```
 
-To inspect this tap before launch without installing the app:
+To inspect the tap without installing the app:
 
 ```sh
 brew tap fabsi88/brewamp
@@ -29,29 +27,21 @@ This is a third-party tap maintained by the BrewAMP publisher. It is not a listi
 
 The Cask installs **BrewAMP.app**. PHP, MariaDB, nginx/Apache and optional phpMyAdmin packages are chosen and installed from within BrewAMP as needed. They are not all installed as fixed Cask dependencies.
 
-## Prepared release
+## Current release
 
 | Field | Value |
 | --- | --- |
 | Version | 0.6.0 |
 | Architecture | arm64 |
-| Planned download URL | `https://brewamp.app/downloads/BrewAMP-0.6.0-arm64.dmg` |
+| Download URL | `https://brewamp.app/downloads/BrewAMP-0.6.0-arm64.dmg` |
 | SHA-256 | `c6756d347b501ef3f20c811e86831630e7c95eb7ad9b6f767d9fbc57e8f47a34` |
 | App bundle identifier | `app.brewamp.BrewAMP` |
 
-The prepared DMG is Developer ID signed and Apple notarized. Its public HTTPS delivery through www.brewamp.app and checksum have been verified. The apex download URL and actual installation through this tap still need verification after the remaining DNS caches update. The versioned download must keep the same bytes once published.
-
-## Launch checklist
-
-1. Publish the prepared, notarized DMG at the exact planned HTTPS URL.
-2. Download it through that public URL and verify the SHA-256 above. Check the enclosed app's signature, notarization and Gatekeeper assessment.
-3. Remove the temporary `disable!` stanza from `Casks/brewamp.rb` and update this launch-status notice.
-4. Run Cask style/audit checks and test installation on a suitable Apple Silicon Mac, preferably a separate clean Mac. Verify launch and uninstall behavior while preserving environment data.
-5. Push the enabled Cask and update the website's Homebrew instructions from “Coming soon” to the working installation command.
+The DMG is Developer ID signed and Apple notarized. Public HTTPS delivery, final checksum and the downloaded app's signature and Gatekeeper assessment have been verified. Versioned downloads keep the same bytes once published.
 
 The Cask includes a `livecheck` rule that reads versioned DMG links on the homepage once it is public. For each future release, update `version` and `sha256` after signing, notarization and final ticket stapling. Keep previously published files unchanged.
 
-## Upgrade and uninstall after launch
+## Upgrade and uninstall
 
 ```sh
 brew update

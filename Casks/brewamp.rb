@@ -12,9 +12,6 @@ cask "brewamp" do
     regex(/href=["']?[^"' >]*BrewAMP[._-]v?(\d+(?:\.\d+)+)[._-]arm64\.dmg/i)
   end
 
-  # Remove only after the public DMG URL and its checksum have been verified.
-  disable! date: "2026-10-26", because: "the first public download is pending the brewamp.app launch"
-
   depends_on arch: :arm64
   depends_on macos: :sonoma
 
