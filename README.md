@@ -2,7 +2,7 @@
 
 The publisher-maintained Homebrew tap for **BrewAMP**, a free native macOS app for local PHP and MariaDB development on Apple Silicon.
 
-**Launch status: prepared, not yet installable.** The Cask is intentionally disabled while the first public DMG download is awaiting the brewamp.app website launch. The repository is public; the download and installation have not been activated yet.
+**Launch status: prepared, not yet installable.** The notarized 0.6.0 DMG is available on the website. The Cask stays disabled until the remaining DNS caches for its exact download host have updated and the actual Homebrew installation checks pass. The website download is live; installation through this tap has not been activated yet.
 
 ## Installation after launch
 
@@ -33,13 +33,13 @@ The Cask installs **BrewAMP.app**. PHP, MariaDB, nginx/Apache and optional phpMy
 
 | Field | Value |
 | --- | --- |
-| Version | 0.5.3 |
+| Version | 0.6.0 |
 | Architecture | arm64 |
-| Planned download URL | `https://brewamp.app/downloads/BrewAMP-0.5.3-arm64.dmg` |
-| SHA-256 | `800b2c3c606660e8dc48eb6eca1de6ba56575f54c9f7d58bde06feaf3a81d2fb` |
+| Planned download URL | `https://brewamp.app/downloads/BrewAMP-0.6.0-arm64.dmg` |
+| SHA-256 | `c6756d347b501ef3f20c811e86831630e7c95eb7ad9b6f767d9fbc57e8f47a34` |
 | App bundle identifier | `app.brewamp.BrewAMP` |
 
-The prepared DMG is Developer ID signed and Apple notarized. Its public HTTP delivery and installation through this tap remain to be verified after hosting is enabled. The versioned download must keep the same bytes once published.
+The prepared DMG is Developer ID signed and Apple notarized. Its public HTTPS delivery through www.brewamp.app and checksum have been verified. The apex download URL and actual installation through this tap still need verification after the remaining DNS caches update. The versioned download must keep the same bytes once published.
 
 ## Launch checklist
 
@@ -63,7 +63,7 @@ Uninstalling quits BrewAMP, which stops the services managed by the app, and rem
 
 ## Publisher and support
 
-BrewAMP is published by **funok consulting UG (haftungsbeschränkt)**. Website: https://brewamp.app/ (launch pending).
+BrewAMP is published by **funok consulting UG (haftungsbeschränkt)**. Website: https://www.brewamp.app/.
 
 Use this repository's issues for Cask packaging problems. For a local report, avoid posting database passwords, project files or other private data. The app remains free; optional support does not unlock features.
 
