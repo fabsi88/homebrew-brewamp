@@ -41,6 +41,8 @@ The DMG is Developer ID signed and Apple notarized. Public HTTPS delivery, final
 
 Release 0.8.0 adds custom local hostnames, virtual hosts and optional URLs without port numbers. A bundled, signed helper manages BrewAMP-owned hosts entries and forwards localhost ports 80/443 to the user-owned router. Setup requires explicit approval in macOS; ordinary port-based environments work without the helper. Local HTTPS certificates also cover the environment hostname; certificate trust remains a separate, optional step.
 
+Validated on October 30, 2026: Homebrew style, strict online audit, livecheck (0.8.0), and an actual registered-Cask upgrade from 0.7.1 to 0.8.0. All 110,175 recorded project/data files and symlinks, exact environment catalog, hosts file and shared formula versions survived unchanged. The installed app passes strict signature/Gatekeeper checks, launches and automatically reconnects its approved helper. The previously running environment is restored. No extra uninstall/reinstall or separate-Mac test was performed for this release.
+
 The Cask includes a `livecheck` rule that reads versioned DMG links on the public homepage. For each future release, update `version` and `sha256` after signing, notarization and final ticket stapling. Keep previously published files unchanged.
 
 ## Upgrade and uninstall
