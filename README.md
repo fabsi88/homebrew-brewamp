@@ -2,7 +2,7 @@
 
 The publisher-maintained Homebrew tap for **BrewAMP**, a free native macOS app for local PHP and MariaDB development on Apple Silicon.
 
-**BrewAMP 0.7.1 is available.** The versioned DMG is Developer ID signed and Apple notarized. Its public HTTPS download and final checksum have been verified.
+**BrewAMP 0.8.0 is available.** The versioned DMG is Developer ID signed and Apple notarized. Its public HTTPS download and final checksum have been verified.
 
 ## Installation
 
@@ -31,17 +31,15 @@ The Cask installs **BrewAMP.app**. PHP, MariaDB, nginx/Apache and optional phpMy
 
 | Field | Value |
 | --- | --- |
-| Version | 0.7.1 |
+| Version | 0.8.0 |
 | Architecture | arm64 |
-| Download URL | `https://brewamp.app/downloads/BrewAMP-0.7.1-arm64.dmg` |
-| SHA-256 | `6d802bba5b84d1f131bb4e589a3cae9cee8fdb48ab6ea98be81aa406b8e66ac4` |
+| Download URL | `https://brewamp.app/downloads/BrewAMP-0.8.0-arm64.dmg` |
+| SHA-256 | `0386f053969625783f7f83caf4d76eed76f6b6a4fc91ef0e690ddfd52624a9ad` |
 | App bundle identifier | `app.brewamp.BrewAMP` |
 
 The DMG is Developer ID signed and Apple notarized. Public HTTPS delivery, final checksum and the downloaded app's signature and Gatekeeper assessment have been verified. Versioned downloads keep the same bytes once published.
 
-Release 0.7.1 adds update notifications, a manual Check for Updates command and a daily startup-check limit with an opt-out in Settings. Installation remains an explicit DMG or Homebrew step.
-
-Validated on October 27, 2026: Homebrew style, strict online audit, livecheck (0.7.1), and an actual upgrade of the registered Cask from 0.7.0 to 0.7.1 in Applications. All 118,516 recorded project/data files and symlinks, exact environment catalog and shared formula versions survived unchanged. Strict signature and Gatekeeper checks pass. The signed app launches, checks the live update feed and restores the previously running environment. An additional uninstall/reinstall cycle was not run for this release.
+Release 0.8.0 adds custom local hostnames, virtual hosts and optional URLs without port numbers. A bundled, signed helper manages BrewAMP-owned hosts entries and forwards localhost ports 80/443 to the user-owned router. Setup requires explicit approval in macOS; ordinary port-based environments work without the helper. Local HTTPS certificates also cover the environment hostname; certificate trust remains a separate, optional step.
 
 The Cask includes a `livecheck` rule that reads versioned DMG links on the public homepage. For each future release, update `version` and `sha256` after signing, notarization and final ticket stapling. Keep previously published files unchanged.
 
@@ -52,6 +50,8 @@ brew update
 brew upgrade --cask fabsi88/brewamp/brewamp
 brew uninstall --cask fabsi88/brewamp/brewamp
 ```
+
+**If you enabled local addresses, first open BrewAMP → Local addresses… → Remove setup.** This removes your BrewAMP-owned hosts entries and unregisters the helper. The Cask does not automatically remove those persistent entries. On upgrades, open Local addresses… → Update setup if the app requests helper re-registration; macOS may ask for approval again.
 
 Uninstalling quits BrewAMP, which stops the services managed by the app, and removes the app. **Projects, databases, environment configuration and shared Homebrew packages remain in place.** Even an explicit `--zap` removes only the production app's preferences and saved window state; the Cask never removes `~/Library/Application Support/BrewAMP` or any environment data. Use BrewAMP's own environment deletion flow when you intend to move an environment and its data to Trash.
 
